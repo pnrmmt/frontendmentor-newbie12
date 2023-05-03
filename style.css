@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Poppins', sans-serif;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.header{
+    margin: 10px auto 10px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.header h1{
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
+ 
+    
+}
+.header h2{
+    color:hsl(234, 12%, 34%);
+    font-weight: 600;
+    font-size: 2em;
+    
+    
+}
+
+p{
+    font-weight: 400;
+    color:  hsl(229, 6%, 66%);
+    margin: 15px 0;
+    
+}
+.supervisor h1{
+    color:hsl(234, 12%, 34%)
+}
+.teamBuilder h1{
+    color:hsl(234, 12%, 34%)
+}
+.calculator h1{
+    color:hsl(234, 12%, 34%)
+}
+.karma h1{
+    color:hsl(234, 12%, 34%)
+}
+.article h1{
+    font-size: 1.4em;
+}
+
+.supervisor{
+    background-color: white;
+    border-top: 4px solid hsl(180, 62%, 55%);
+    border-radius: 4px;
+    box-shadow: -2px 4px 16px -8px rgba(0,0,0,0.75);
+    padding: 20px;
+    margin:13px;
+    width: 290px;
+    font-size: 0.79em;  
+    transform: translateY(50%);
+}
+
+.teamBuilder{
+    background-color: white;
+    border-top: 4px solid hsl(0, 78%, 62%);
+    box-shadow:  -2px 4px 16px -8px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 20px;
+    margin:13px;
+    width: 290px;
+    font-size: 0.79em;
+}
+
+.karma{
+    background-color: white;
+    border-top: 4px solid hsl(34, 97%, 64%);
+    box-shadow:-2px 4px 16px -8px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 20px;
+    margin:13px;
+    width: 290px;
+    font-size: 0.79em;
+   
+   
+}
+
+.calculator{
+    background-color: white;
+    border-top: 4px solid  hsl(212, 86%, 64%);
+    box-shadow: -2px 4px 16px -8px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 20px;
+    margin:13px;
+    width: 290px;
+    font-size: 0.79em;
+    transform: translateY(50%);
+ 
+}
+.article{
+    display: flex;
+    justify-content: center;
+    width: 1230px;
+    flex-wrap: wrap;
+}
+/* burada article'ye width vermezsek içeriği biraz daha sağdan başlatıyor. width verince tam ortaladı */
+/* flex-wrap: wrap; değeri ile esnek kutu içerisindeki öğelerin boyutlarını küçültmeden sabit tutabilmek için öğeleri bir alt satıra ya da yan satıra geçirecektir. */
+/* justify content center: wrapped özelliği verdikten sonraki içeriği ortaladı */
+
+img{
+    display: block;
+    margin-left: auto;
+}
+/* display: block; ve margin-left: auto; ile görselleri en sola hizaladık */
+
+@media screen and (max-width:775px) {
+    
+    .supervisor, .calculator{
+        
+    transform: translateY(0);
+
+    }
+    .article{
+        display: grid;
+        grid-template-columns: 1fr;
+
+
+    }
+    .calculator{
+        order:4;
+    }
+    .supervisor, .calculator, .karma, .teamBuilder{
+        margin:10px auto;
+    }
+
+    .container{
+        margin: 10px auto 30px;
+    }
+
+    .header{
+        max-width: 320px;
+        margin-bottom: 45px;
+    
+    }
+    .header h1{
+        font-size: 1.6em;
+    }
+    .header h2{
+        font-size: 1.6em;
+    }
+
+
+}
